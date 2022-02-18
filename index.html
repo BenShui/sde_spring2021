@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MAT520:Stochastic Differential Equation</title>
+  <h2>Southwestern University of Finance and Economics</h2>
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+  <!-- Google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-46895817-2', 'auto');
+  ga('send', 'pageview');
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <script src="convnet_demo/convnet-min.js"></script>
+  <script src="convnet_demo/convnet_demo.js"></script>
+
+  <script>
+  function page_loaded() {
+    $('#convask').click(function(){
+      $("#explain").slideToggle('fast');
+    })
+    start_convnet_demo();
+  }
+  </script>
+</head>
+
+<body onload="page_loaded()">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand brand" href="index.html">Home</a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://cs231n.github.io/"><b>Course Notes</b></a></li>
+          <li><a href="index.html#coursework"><b>Coursework</b></a></li>
+          <li><a href="schedule.html"><b>Schedule</b></a></li>
+          <li><a href="office_hours.html"><b>Office Hours</b></a></li>
+          <li><a href="https://canvas.stanford.edu/courses/135672/external_tools/3367"><b>Lecture Videos</b></a></li>
+          <li><a href="http://piazza.com/stanford/spring2021/cs231n"><b>Piazza</b></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+<!--  <div id="header" style="text-align:center">-->
+<!--    <a href="http://svl.stanford.edu">-->
+<!--      <img src="img/svl_logo.png" class="logo-left">-->
+<!--    </a>-->
+<!--    <a href="http://stanford.edu/">-->
+<!--      <img src="img/stanfordlogo.jpg" class="logo-right">-->
+<!--    </a>-->
+<!--    <h1>CS231n: Convolutional Neural Networks for Visual Recognition</h1>-->
+<!--    <h3>Stanford - Spring 2021</h3>-->
+<!--    <div style="clear:both;"></div>-->
+<!--  </div>-->
+
+<!--  <div id="teaser">-->
+<!--    <div id="convnetvis"></div>-->
+<!--    <span class="glyphicon glyphicon-question-sign" id="convask"></span>-->
+<!--    <div id="demomsg">-->
+<!--      *This network is running live in your browser-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="container">-->
+<!--    <div id="explain">-->
+<!--      The Convolutional Neural Network in this example is classifying images live in your browser using Javascript, at about 10 milliseconds per image. It takes an input image and transforms it through a series of functions into class probabilities at the end. The transformed representations in this visualization can be loosely thought of as the activations of the neurons along the way. The parameters of this function are learned with backpropagation on a dataset of (image, label) pairs. This particular network is classifying <a href="http://www.cs.toronto.edu/~kriz/cifar.html">CIFAR-10</a> images into one of 10 classes and was trained with <a href="http://cs.stanford.edu/people/karpathy/convnetjs/">ConvNetJS</a>. Its exact architecture is [conv-relu-conv-relu-pool]x3-fc-softmax, for a total of 17 layers and 7000 parameters. It uses 3x3 convolutions and 2x2 pooling regions. By the end of the class, you will know exactly what all these numbers mean.-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--<div class="container sec">-->
+<!--<center>-->
+<!-- <h4 style="color:red;">This iteration of the class has ended!</h4>-->
+<!--</center>-->
+<!--</div>-->
+
+<div class="sechighlight">
+<div class="container sec">
+  <h2>Course Description</h2>
+
+  <div id="coursedesc">
+    This course is designed to introduce theories and applications of stochastic differential equations. A stochastic differential equation (SDE) is a differential equation in which one or more of the terms is a stochastic process, therefore its solution is also a stochastic process. SDEs are widely applied in both natural and social sciences including physics, finance, etc. We will cover both stochastic ordinary differential equations and stochastic partial differential equations. Though it is strongly encouraged that students have already learned or taught themselves the knowledge in ODEs, these are not required for this course. Though I shall provide a quick review when necessary, students registering for this course are expected to have a solid understanding of and obtain skills for the following topics
+    Calculus: Differentiation (product rule, quotient rule, chain rule), integration (by parts), asymptotic expansions(Taylor expansions), some basics of the Lebesgue integration theories such as Dominated convergence theorem, Fubini's theorem
+    Probability: probability spaces and measure spaces, probability distribution functions(pdf), expectation, variation
+    Measure theory: Acquaintance with basic measure theorey is meritous
+    Stochastic process (some of the basics): Brownian motion or the Wiener process
+    This is an advanced course for undergraduates with strong motivations and some topics are at the level for graduates.
+  </div>
+  <br>
+</div>
+</div>
+
+<div class="container sec" id="people">
+  <div class="col-md-2">
+    <h3>Instructors</h3>
+    <div class="instructor">
+      <a href="https://qwang.swufe.edu.cn" target="_blank">
+        <div class="instructorphoto">
+          <img class="img-hover" src="img/qwang.jpg">
+        </div>
+      <div>Qi Wang</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="col-md-10">
+    <h3>Teaching Assistant</h3>
+
+  </div>
+</div>
+
+<div class="sechighlight">
+  <div class="container sec" id="logistics">
+    <br>
+    <h2>Course Information</h2>
+    <br>
+    <ul>
+      <li><b>Lectures:</b> Thursday 1:00-3:35PM.</li>
+      <li><b>Classroom:</b> F101 </li>
+      <li><b>Office Hours:</b> Tuesday 4:00-5:00PM.</li>
+      <li><b>Contact:</b> qwang@swufe.edu.cn</li>
+    </ul>
+  </div>
+</div>
+
+<div class="container sec" id="coursework" style="margin-top:-20px">
+  <br>
+  <h2>Coursework</h2>
+
+  <h3>Prerequisites</h3>
+    <ul>
+      <li><span class="spanh">Computing software</span><br>some very basics (graph plot, iterations) of numerical computing software, such as MATLAB, MATHEMATICA, etc.</li>
+      <li><span class="spanh">Basic Calculus and Probability Theory</span> <br>You should have basic knowledge in calculus and probability theory.</li>
+    </ul>
+
+  <h3>Assignments (20%)</h3>
+  <p>See the <a href="assignments.html">Assignment</a> page for details regarding assignments, late days and collaboration policies.</p>
+
+  <h3>Midterm (40%)</h3>
+  <p>Detailed information regarding the midterm will be made available as an announcement on <a href="http://piazza.com/stanford/spring2021/cs231n">Piazza</a> in the coming weeks.</p>
+
+  <h3>Final Project (40%)</h3>
+  <p>See the <a href="project.html">Project</a> page for more details regarding the final course project.</p>
+
+</div>
+</div>
+
+
+<!-- jQuery and Boostrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
